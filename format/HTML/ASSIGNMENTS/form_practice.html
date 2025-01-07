@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>creating a form in html</title>
+        <style>
+.card{
+    width:300px;
+    box-shadow: 2px 2px 3px 3px grey;
+    margin:20px;
+    float: left;
+}
+.card-header{
+    background-color: aliceblue;
+    padding:10px 15px;
+}
+.card-body{
+    padding:18px;
+}
+.card-footer{
+    padding:10px;
+    text-align:right;
+    background-color:  gray;
+}
+.card{
+    border:2px solid black;
+    width:700px;
+    margin:auto;
+    padding-top:20px;
+   margin-top:20px;
+   margin-bottom: 100px;
+}
+.form-element{
+    height: 35px;
+    margin-bottom:20px;
+}
+.form-label{
+    width:30%;
+    float:left;
+    font-size: 20px;
+}
+.form-control-container{
+    float:left;
+    width:70%;
+}
+.form-control{
+    width:100%;
+    padding:8px;
+    border-radius: 3px;
+    border: 1px solid blue;
+}
+.form-control:focus{
+    box-shadow: 0px 0px 3px 2px rgb(5, 5, 99);
+outline:none;
+}
+.button{
+    color:white;
+    background-color: red;
+    font-size:18px;
+    cursor:pointer;
+    outline:none;
+    padding:8px 8px;
+    transition:backgorund-color 0.3s;
+   
+}
+.button:hover{
+    background-color: rgb(9, 78, 207);
+}
+.reset-btn{
+    background-color: red;
+    background-color: red;
+    font-size: 18px;
+    margin: 20px;
+    padding: 8px 8px;
+    cursor:pointer;
+    color: white;
+ outline:none;
+}
+
+        </style>
+        
+    </head>
+    <body>
+        <div class="card">
+            <div class="card-header">Registration_Form</div>
+            <div class="card-body">
+                <div class="form-element">
+                    <div class="form-label"><label for="name">Name</label></div>
+                    <div class="form-control-container"><input type="text"class="form-control" id="name"></div>
+                </div>
+
+                <div class="form-element">
+                    <div class="form-label"><label for="fathername">Father's Name</label></div>
+                    <div class="form-control-container"><input type="text" class="form-control"id="fathername"></div>
+                </div>
+
+                <div class="form-element">
+<div class="form-label"><label for="mothername">Mother's Name</label></div>
+<div class="form-control-container"><input type="text" class="form-control" id="mothername"></div>
+                </div>
+
+            </div>
+            <div class="card-footer">
+<button class="button" formnovalidate="validate">Submit</button>
+<input type="reset" class="reset-btn" value="clear">           
+</div>
+
+        </div>
+    </body>
+</html>

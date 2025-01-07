@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"rel="stylesheet">
+    <title>sidebar</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link href="CSS/sidebar.css" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <h4>sidebar</h4>
+        <ul class="sidebar-menu">
+            <li><a href="#"><i class="fa fa-qrcode"></i>Dashboard</a></li>
+            <li class="sub-menus"><a href="#"><i class="fa fa-qrcode"></i>Products<i class="fa fa-chevron-circle-down indicator"></i></a>
+            <ul>
+                <li><a href="#"><i class="fa fa-shopping-bag"></i>Electronics</a></li>
+                <li><a href="#"><i class="fa fa-shopping-bag"></i>Appliances</a></li>
+                <li><a href="#"><i class="fa fa-shopping-bag"></i>fashion</a></li>
+
+            </ul>
+        </li>
+            <li><a href="#"><i class="fa fa-calendar"></i>Events</a></li>
+            <li><a href="#"><i class="fa fa-cogs"></i>Contact</a></li>
+        </ul>
+    </div>
+    <script>
+        $(".sub-menus a").click((event)=>{
+            $(event.target).parent().find("ul").slideToggle
+            ();
+            $(event.target).parent().find(".indicator").toggleClass("reverse");
+        });
+
+    </script>
+    
+</body>
+</html>

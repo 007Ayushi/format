@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images</title>
+    <style>
+        .photo-gallery{
+            width:95%;
+            border:3px solid pink;
+            padding: 10px;
+            margin: auto;
+            margin-top: 100px;
+            height: 500px;
+            /* photo gallery box height */
+            transition: all 0.3s;
+        }
+        .gallery{
+            float:left;
+            margin: 10px;
+        }
+        .img-caption{
+            text-align: center;
+        }
+        .gallery:hover{
+            transform:scale(1.1);
+        }
+        .gallery img{
+            border:3px ridge orange;
+            box-shadow: 0px 0px 2px 2px gray;
+        }
+        #gallery1{
+            background-image: url("sunflower.jpeg");
+        }
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #nav{
+        background-color: blue;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+       
+    }
+    #nav .navbar{ 
+        width:30%;
+        height: 60px;
+        float: left;
+        padding-top:20px;
+        color:white;
+      
+    }
+    #nav .navbar_menus{ 
+        width:70%;  
+        height: 60px;
+        
+    }
+    #nav .navbar_menus ul{
+       float: left;
+       
+     
+    }
+    #nav .navbar_menus ul li {
+        list-style-type: none;
+        float:left;
+        padding-right: 30px;
+        padding-top: 5px; 
+    }
+    #nav .navbar_menus ul li a{
+        color:white;
+    }
+        .photo{
+            cursor: pointer;
+        }
+        body{
+            background-image: url("https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?cs=srgb&dl=pexels-pixabay-56866.jpg&fm=jpg");
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Images</h1>
+    <div id="nav">
+        <div class="navbar">Ayushi Gupta</div>
+        <div class="navbar_menus">
+            <ul>
+                <li><a href="html3.html">html3</a></li>
+                <li><a href="HTML/html2.html">html2</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="photo-gallery">
+        <div class="gallery" id="gallery1">
+            <img src="sunflower.jpeg" style="width:250px;height:180px"alt="sunflower image was here .we can get oil from this flower." title="sunflower smells too good">
+            <div class="img-caption">sunflower</div>
+        </div>
+
+        <div class="gallery">
+            <img src="https://th.bing.com/th/id/OIP.t4sSNbdQ27UCqT03Uir_rQHaFi?w=206&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" width="350px" height="150px">
+        </div>
+    </div>
+    <figure class="photo">
+        <img src="sunflower.jpeg" width="300px" height="180px"alt="sunflower image was here .we can get oil from this flower." title="sunflower smells too good">
+        <figcaption>sunflower1</figcaption>
+    </figure>
+
+    <figure>
+        <a href="https://www.youtube.com/">
+        <img src="sunflower.jpeg" width="300px" height="180px"></a>   
+        <figcaption>sunflower2</figcaption>
+    </figure>
+    
+    <img src="https://th.bing.com/th/id/OIP.t4sSNbdQ27UCqT03Uir_rQHaFi?w=206&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+    <img src="sunflower.jpeg" width="300px" height="180px">
+    <img src="sunflower.jpeg" width="300px" height="180px">
+    <img src="sunflower.jpeg" width="300px" height="180px">
+ 
+</body>
+</html>

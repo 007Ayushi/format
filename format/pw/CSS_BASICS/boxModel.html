@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX MODEL</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        /* if we take width and height as percentage,it will take according to its parent. */
+        #div1,#div2{
+           min-width: 400px;
+           /* its minimum height is 50px it will automatically
+           set its height. */
+          min-height: 50px;
+          max-height: 500px;
+           border:5px ridge paleturquoise;
+           margin: 20px;
+           padding: 50px;
+        }
+        #div1{
+            background-color: rebeccapurple !important;
+        }
+        /* if we dont want any property never override then after property !important */
+    </style>
+</head>
+<body>
+   <div id="div1">This is some content.
+    THIS IS SOME Contents<br>
+    this is some content<br>
+    this is some content<br>
+   </div>
+
+   <div id="div2">
+    This is some content.
+       </div>
+
+</body>
+</html>

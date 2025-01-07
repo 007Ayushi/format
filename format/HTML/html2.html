@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <link href="CSS/styles.css"rel="stylesheet">
+        <style>
+          
+            .state{
+                background-color: rgb(121, 238, 121);
+                margin:10px 20px;
+               padding-top:20px;
+               padding-right: 20px;
+               padding-left: 20px;
+               padding-bottom: 20px;
+               width: 200px;
+               height: 60px;
+               font-size: 20px;
+               float: left;
+               border-width: 6px ;
+               border-color:red;
+               border-style:ridge;
+               outline: 4px pink dotted;
+               outline-offset: 2px;
+               border-radius: 10px;
+               box-shadow: 10px 15px 3px  black;
+               transition: background-color 3s,font-size 3s;
+            }
+            .state:hover{
+                background-color: red;
+                font-size: 20px;
+                /* transform:scale(1.2) rotate(40deg) translate(20px,10px); */
+                transform-origin:bottom right;
+                transform: rotate3d(0.1,2,90deg);
+                /* animation: myanimation 10s; */
+                background-image: radial-gradient(circle,red 10%,blue 40%,pink 50%,green 0%);
+            }
+            #karnataka{                   clear: left;
+                outline:4px orangered solid;
+            }
+            /* @keyframes myanimation{
+                0%{background-color: red; transform:rotate(0deg) scale(2);}
+                25%{background-color: pink; trasform:rotate(90deg) scale(1);}
+                75%{background-color: yellow;transform: rotate(-90deg) scale(1.5);}
+                100%{background-color: orangered;transform:rotate(0deg) scale(2)}
+            }
+         */
+        </style>
+        <body>
+
+
+             <!-- Navigation Starts here -->
+             <div id="navbar">
+                <div class="navbar-brand">India Tourism</div>
+                <div class="nav">
+                   <ul>
+                    <li><a href="html1.html">html1</a></li>
+                    <li><a href="html2.html">html2</a></li>
+                    <li><a href="html3.html">html3</a></li>
+                   </ul>     
+                </div>
+            </div>
+            <!-- Navigation Ends here -->
+
+            <div class="state">Jharkhand</div>
+            <div class="state">bihar</div>
+            <div class="state">kerala</div>
+            <div class="state"id="karnataka">karnataka</div>
+            <div class="state">assam</div>
+            <div class="state">orissa</div>
+            <div class="state">andhra pradesh</div>
+            <div class="state">sikkim</div>
+            <div class="state">goa</div>
+            <div class="state">gujarat</div>
+        </body>
+    </head>
+</html>

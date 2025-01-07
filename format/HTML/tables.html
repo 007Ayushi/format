@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link src="CSS/styles.css" rel="stylesheet">
+        <title>table</title>
+    </head>
+       <style>
+        .table{
+            width: 100%;
+            margin: auto;
+            cursor: pointer;
+            box-shadow: 1px 1px 2px 2px wheat;
+            margin-top:10px;
+            margin-bottom: 30px;
+            border-collapse: collapse;
+        }
+        .table_container{
+            width: 95%;
+            padding: 8px;
+        }
+        .table td{
+            border-top:1px solid gray;
+            border-bottom: 1px solid gray;
+        
+        }
+        .table th{
+            border:1px solid greenyellow;
+            padding:10px 10px;
+            text-align: left;
+            background-color:rgb(203, 199, 199);
+            color: white;
+        }
+        .table tr{
+            transition: background-color 0.3s;
+            
+        }
+        .table tr:hover{
+            background-color: grey;
+        }
+       </style>
+    
+    <body>
+       <!-- Navigation Starts here -->
+       <!-- <div id="navbar">
+        <div class="navbar-brand">India Tourism</div>
+        <div class="nav">
+           <ul>
+            <li><a href="html1.html">html1</a></li>
+            <li><a href="html2.html">html2</a></li>
+            <li><a href="html3.html">html3</a></li>
+            <li><a href="tables.html">tables</a></li>
+           </ul>     
+        </div>
+    </div> -->
+    <!-- Navigation Ends here -->
+
+    <div class="table_container">
+        <table class="table">
+           <thead>
+            <tr>
+                <!-- for column heading -->
+                <th>state</th>
+                <th>capital</th>
+                <th>language</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+                <td>Jharkhand</td>
+                <td>Ranchi</td>
+                <td>hindi</td>
+            </tr>
+            <tr>
+                <td>karnataka</td>
+                <td>bangalore</td>
+                <td>kannad</td>
+            </tr>
+            <tr>
+                <td>Bihar</td>
+                <td>patna</td>
+                <td>bhojpuri</td>
+            </tr>
+            <tr>
+                <td>goa</td>
+                <td>panji</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+           </tbody>
+        </table>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Projects with Async JS</title>
+</head>
+<body>
+    <h1>2 Projects with Async JS</h1>
+    <h1>CHAI AUR CODE</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("ayushi");
+        
+    // },2000)
+
+    const sayAyushi=function(){
+        console.log("ayushi")
+    }
+
+    //setTimeout(sayAyushi,2000)//its a 2millisecond
+    //document.querySelector('h1').innerHTML="best js series"
+    //but i want this to be change after 2sec
+
+    const changeHeading=function(){
+        document.querySelector('h1').innerHTML="best js series"
+    }
+    const changeMe= setTimeout(changeHeading,2000)//its a 2millisecond
+    
+    //now how to prevent this change
+    document.querySelector('#stop').
+    addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("stopped");     
+    })
+
+    
+</script>
+</html>

@@ -1,0 +1,312 @@
+<html>
+    <head>
+        <link href="CSS/styles.css" rel="stylesheet">
+        <title>table</title>
+    </head>
+       <style>
+        .table{
+            width: 100%;
+            margin: auto;
+            cursor: pointer;
+            box-shadow: 1px 1px 2px 2px wheat;
+            margin-top:10px;
+            margin-bottom: 30px;
+            border-collapse: collapse;
+            min-width: 1000px;
+            caption-side:top;
+        }
+        .table_container{
+            width: 95%;
+            padding: 8px;
+            overflow: auto;
+            max-height: 600px;
+        }
+        .table td{
+            border-top:1px solid gray;
+            border-bottom: 1px solid gray;
+        
+        }
+        .table th{
+            border:1px solid greenyellow;
+            padding:10px 10px;
+            text-align: left;
+            background-color:rgb(203, 199, 199);
+            color: white;
+        }
+        .table tr:nth-child(even){
+            background-color: white;
+        }
+        .table tr:nth-child(odd){
+            background-color: rgb(190, 188, 188);
+        }
+        .table tr{
+            transition: background-color 0.3s;
+            
+        }
+        .table tr:hover{
+            background-color: grey;
+        }
+        .table caption{
+            background-color: rgb(60, 210, 248);
+            color: white;
+            padding: 12px 10px;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 2px; 
+        }
+        .hindi{
+            vertical-align: middle;
+        }
+
+        /* pagination styles */
+
+       </style>
+    
+    <body>
+       <!-- Navigation Starts here -->
+       <!-- <div id="navbar">
+        <div class="navbar-brand">India Tourism</div>
+        <div class="nav">
+           <ul>
+            <li><a href="html1.html">html1</a></li>
+            <li><a href="html2.html">html2</a></li>
+            <li><a href="html3.html">html3</a></li>
+            <li><a href="tables.html">tables</a></li>
+           </ul>     
+        </div>
+    </div> -->
+    <!-- Navigation Ends here -->
+
+
+<div class="container">
+    <div class="card float-left" >
+        <div class="card-header">Goa</div>
+        <div class="card-body">The term responsibility has two different senses in management literature. Some writers explain it as a duty or task which assigned to a subordinate on the basis of his position in the organization. Responsibility is also the obligation of an individual to perform the duty or task assigned to him. Let us understand what is responsibility and its characteristics in a detailed manner. </div>
+    <div class="card-footer"><a href="#">Learn More...</a></div>
+    </div>
+
+    <div class="card float-left">
+        <div class="card-header">Goa</div>
+        <div class="card-body">The term responsibility has two different senses in management literature. Some writers explain it as a duty or task which assigned to a subordinate on the basis of his position in the organization. Responsibility is also the obligation of an individual to perform the duty or task assigned to him. Let us understand what is responsibility and its characteristics in a detailed manner. </div>
+    <div class="card-footer"><a href="#">Learn More...</a></div>
+    </div>
+
+    <div class="card float-left">
+        <div class="card-header">Goa</div>
+        <div class="card-body">The term responsibility has two different senses in management literature. Some writers explain it as a duty or task which assigned to a subordinate on the basis of his position in the organization. Responsibility is also the obligation of an individual to perform the duty or task assigned to him. Let us understand what is responsibility and its characteristics in a detailed manner. </div>
+    <div class="card-footer"> <a href="#">Learn More...</a></div>
+    </div>
+
+    <div class="card float-left">
+        <div class="card-header">Sri Nagar</div>
+        <div class="card-body">
+            <h4>Things to do</h4>
+            <ul class="list-group">
+                <li>list item1</li>
+                <li>list item2</li>
+                <li>list item3</li>
+                <li>list item4</li>
+                <li>list item5</li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    <div class="table_container">
+        <table class="table">
+            <caption>states of India
+                <div style="width:300px">
+                <input type="search" class="form-control">
+                </div>
+            </caption>
+
+
+           <thead>
+            <tr>
+                <!-- for column heading -->
+                <th>state</th>
+                <th>capital</th>
+                <th>language</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+                <td>Jharkhand</td>
+                <td>Ranchi</td>
+                <td rowspan="2" class="hindi">hindi</td>
+            </tr>
+
+            <tr>
+                <td>patna</td>
+                <td>Raipur</td>
+
+            </tr>
+            <tr>
+                <td>karnataka</td>
+                <td>bangalore</td>
+                <td>kannad</td>
+            </tr>
+            <tr>
+                <td>Bihar</td>
+                <td>patna</td>
+                <td>bhojpuri</td>
+            </tr>
+            <tr>
+                <td>goa</td>
+                <td>panji</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+            <tr>
+                <td>maharastra</td>
+                <td>mumbai</td>
+                <td>english</td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2">Total;</td>
+                <td> 29 States</td>
+            </tr>
+           </tbody>
+        </table>
+    </div>
+    <div class="pagination">
+        <ul>
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+
+    <div class="page">
+        <ul>
+            <!-- to display arrow in left hand side s0,laquo; -->
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">a</a></li>
+            <li><a href="#">b</a></li>
+            <li><a href="#">c</a></li>
+            <li><a href="#">d</a></li>
+            <li><a href="#">e</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+
+    
+    </body>
+</html>

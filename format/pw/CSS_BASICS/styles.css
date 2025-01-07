@@ -1,0 +1,36 @@
+/* Universal selector */
+*{
+    background-color: azure;
+    background-image: url("https://tse4.mm.bing.net/th?id=OIP.gvo7VwB5UYPg5uglRYl6JAHaFi&pid=Api&P=0&h=220");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* backgound will be fixed. */
+}
+h4{
+    color:orangered;
+    text-indent: 20px;
+    line-height: 20px;
+}
+/* h5{
+    color:blue;
+} */
+.class{
+    color:palegreen;
+    font-style: italic;
+}
+/* Grouping of selectors */
+/* in rgba , a represents opacity */
+#id,h5{
+    color: rgba(43,43, 139, 1);
+}
+/* hexadecimal values */
+h1{
+    color:#a00bea;
+    background-color: rosybrown;
+    text-decoration: underline;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;/* to add spaces in b/w words */
+     
+}

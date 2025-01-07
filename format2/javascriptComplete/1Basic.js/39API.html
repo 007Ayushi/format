@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color:white">
+    <h2>API request and V8 engine</h2>
+    
+    <!-- 0 UNSENT Client has been created.open() not called yet.
+    1 OPENED open() has been called.
+    2 HEADERS_RECEIVED send()has been called,and headers and status are available.
+    3 LOADING Downloading:responseText holds partial data.
+    4 DONE the operation is complete. -->
+   
+
+    <script>
+        //XMLHttpRequest is used heavily in AJAX programming.(AJAX is made up by XML+Javascript)
+        //its a method that we use to data request and receive. and use to create object
+        //.open() open apneaap call ni hota h isse send() se call krna hota hai
+        const requestURL='https://api.github.com/users/hiteshchoudhary'
+       const xhr= new XMLHttpRequest();//object bnaye hai xhr
+       xhr.open('GET',requestURL) 
+       xhr.onreadystatechange=function(){ //for keeping track
+        console.log(xhr.readyState); 
+        if(xhr.readyState === 4){
+           const data=JSON.parse(this.responseText);//string ko JSON mein convert kr diye then we will get a object 
+           console.log(typeof data);//url se object string mein aata hai toh parsing krna pdega
+           console.log(data.followers);   
+        }
+       }//for continuosly tracking
+       
+       xhr.send();//now it has called
+
+    //console:technically js ka part hai ar ni h ,document bhi ni hai ye sb browser ka devTools hai
+    //v8 engine debugging tools hai ar console bhi yhi se implement hua h in c++ language
+    // js bhi c++ se run hota h
+    //js is wrapper class based on c++.
+
+    </script>
+</body>
+</html>

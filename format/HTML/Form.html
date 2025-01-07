@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link href="CSS/styles.css" rel="stylesheet">
+</head>
+<body>
+<!-- Navigation Starts here -->
+    <div id="navbar">
+        <div class="navbar-brand">India Tourism</div>
+        <div class="nav">
+           <ul>
+            <li><a href="html1.html">html1</a></li>
+            <li><a href="html2.html">html2</a></li>
+            <li><a href="html3.html">html3</a></li>
+            <li><a href="form.html">form</a></li>
+           </ul>     
+        </div>
+    </div>
+    <!-- Navigation Ends here -->
+
+
+    <form id="f1">
+        <!-- card body starts here -->
+        <div class="signup-card">
+            <div class="card-header">Sign Up</div>
+
+            <!-- card body starts here -->
+            <div class="card-body">
+            <div class="form-element">
+            <div class="form-label"><label for="email">Email*:</label></div>
+            <div class="form-control-container"><input type="email" class="form-control" id="email"  name="email" autocomplete="off" autofocus="autofocus" placeholder="please enter your email" required="required"/></div>
+            </div>
+
+            <!-- name is useful for server side programming.
+             server cant identify id,id is important only for frontened. -->
+
+            <div class="form-element">
+                <div class="form-label"><label for="password">password:</label></div>
+                <div class="form-control-container"><input type="password" class="form-control" id="password" name="password" placeholder="password" maxlength="5" ></div>
+            </div>
+
+            <div class="form-element">
+                <div class="form-label"><label for="color">color:</label></div>
+                <div class="form-control-container"><input type="color" class="form-control" id="color" password="color" readonly="readonly" placeholder="color"></div>
+            </div>
+            <div class="form-element">
+                <div class="form-label"><label for="city">City:</label></div>
+                <div class="form-control-container"><input type="city" class="form-control" id="city" placeholder="city" pattern="^[A-Za-z]*$" title="only alphbets and spaces are allowed"list="cities">
+                    <datalist id="cities">
+                        <option value="hyderabad"></option>
+                        <option value="ranchi"></option>
+                        <option value="chennai"></option>
+                        <option value="kochi"></option>
+                        <option value="goa"></option>
+                        <option value="kolkata"></option>
+                        <option value="mizoram"></option>
+                        <option value="assam"></option>
+                        <option value="imphal"></option>
+
+                    </datalist>
+                </div>
+
+            </div>
+            <div class="form-element">
+                <div class="form-label"><label for="date">Date of Birth:</label></div>
+                <div class="form-control-container">
+                <input type="date" class="form-control" id="date"></div>
+            </div>
+
+            <div class="form-element">
+                <div class="form-label"><label for="dateofbirth">Date & Time of Journey:</label>
+                </div>
+                <div class="form-control-container">
+                <input type="datetime-local" class="form-control" id="dateofbirth"></div>
+            </div>
+
+            <div class="form-element">
+                <div class="form-label"><label for="dateofbirth">time</label>
+                </div>
+                <div class="form-control-container">
+                <input type="time" class="form-control" id="dateofbirth"></div>
+            </div>
+
+            <div class="form-element">
+                <div class="form-label">
+                <label for="month">Month</label>
+                </div>
+                <div class="form-control-container">
+                <input type="month" class="form-control" id="month"></div>
+            </div>
+
+            <div class="form-element">
+                <div class="form-label"><label for="week">week of Journey:</label>
+                </div>
+                <div class="form-control-container">
+                <input type="week" class="form-control" id="week"></div>
+            </div>
+
+            <div class="form-element">
+                <div class="form-label"><label for="file">choose file</label>
+                </div>
+                <div class="form-control-container">
+                <input type="file" class="form-control" id="file" multiple="multiple"></div>
+            </div>
+
+            <fieldset>
+                <legend>journey Details<legend>
+                <div class="form-element">
+                    <div class="form-label"><label for="dateofbirth">Date & Time of Journey:</label>
+                    </div>
+                    <div class="form-control-container">
+                    <input type="date" class="form-control" id="dateofbirth"></div>
+                </div>
+
+                <div class="form-element">
+                    <div class="form-label"><label for="dateofbirth">website Rating range</label>
+                    </div>
+                    <div class="form-control-container">
+                    <input type="range" min="0" max="5" value="4" class="form-control" id="dateofbirth"></div>
+                </div>
+    
+                <div class="form-element">
+                    <div class="form-label"><label for="dateofbirth">Date & Time of Journey:</label>
+                    </div>
+                    <div class="form-control-container">
+                    <input type="datetime-local" class="form-control" id="dateofbirth"></div>
+                </div>
+    
+    
+            </fieldset>
+            <div class="form-element">
+                <div class="form-label"><label for="portfolio_url">portfolio url</label>
+                </div>
+                <div class="form-control-container">
+                <input type="url" class="form-control" id="portfolio_url"></div>
+            </div>
+
+
+            <!-- it will allow only integers even decimal too. -->
+            <div class="form-element">
+                <div class="form-label"><label for="number">number of year of experience:</label>
+                </div>
+                <div class="form-control-container">
+                <input type="number" class="form-control" id="number" step="number" min="0" max="10" ></div>
+            </div>
+
+           
+            <div class="form-element">
+                <div class="form-label"><label for="gender">Gender</label></div>
+                <div  class="form-control-container">
+                  <input type="radio" id="male" name="gender" checked="checked">
+                    <label for="gender">male</label>
+                    <input type="radio" id="female" name="gender">
+                    <label fpr="radio">female</label>
+                    <input type="radio" id="others" name="gender">
+                    <label for="radio">others</label> 
+                </div>
+
+
+                <div class="form-element">
+                    <div class="form-label">
+                        <!-- non breaking space -->
+                        &nbsp;
+                    </div>
+                    <div class="form-control-container">
+                    <input type="checkbox"  id="receive">
+                    <label for="receive">receive news letter</label>
+                </div>
+            </div>
+                    <div class="form-element">
+                        <div class="form-label">
+                            <label for="address">address</label>
+                        </div>
+                        <div class="form-control-container">
+                            <textarea id="address" name="address" class="form-control"cols="60" rows="3"placeholder="address"></textarea>
+                        </div>
+                    </div>              
+<div class="form-element" style="height:200px">
+    <div class="label">
+        <label for="country">Country</label>
+    </div>
+    <div class="form-control-container">
+        <select id="country" name="country" class="form-control" multiple="multiple"size="6">
+            <optgroup><option value="">please select</option></optgroup>
+            <optgroup label="A"> <option value="afghanistan">afghanistan</option></optgroup>
+           <optgroup label="I"><option value="india">india</option></optgroup>
+            <optgroup label="F"><option value="finland">finland</option>
+                <option value="france">france</option></optgroup>
+           <optgroup label="J"><option value="japan">japan</option></optgroup>
+            <optgroup label="R"><option value="russia">russia</option>
+                <option value="romania">romania</option></optgroup>
+           <optgroup label="U"> <option value="united kingdom">united kingdom</option></optgroup>
+            <optgroup label="B"><option value="brazil">brazil</option></optgroup>
+        </select>
+    </div>
+</div>
+
+
+            </div>
+            </div>
+        </div>
+        <!-- card body ends here -->
+
+        <div class="card-footer">
+
+            <!-- u dont want to submit value from the user,so value will be fixed in everywhere.-->
+            <input type="hidden" name="usertype" value="customer" >
+            <button class="btn" formnovalidate="novalidate" formaction="http://postman-echo.com/post" formmethod="post" formtarget="myiframe">
+            submit(Button Tag)
+            </button>
+                <!-- <img src="ok.jpeg" width="20px"> -->
+                 <input type="submit" value="input submit" formaction="http://postman-echo.com/post" formmethod="post" formtarget="myiframe">
+            <input type="reset" class="btn reset-button" value="clear">
+            <div>
+                <input type="image" src="ok.jpeg" width="20px">
+            </div>
+            <div>
+                *marks are mandatory fields.
+            </div>
+        </div>
+        </div>
+    </form>
+
+    <div class="center">
+        <input type="text" name="friendname" placeholder="name of your friend" form="f1">
+    </div>
+    <iframe name="myiframe" width="100%" height="400px"></iframe>
+
+    <!-- for server side submission name value pairs are important. -->
+</body>
+</html>

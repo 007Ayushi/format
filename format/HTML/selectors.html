@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+    <style>
+.class1{
+ background-color: goldenrod;
+ border: 2px solid red;
+ margin: 5px;
+ padding: 5px;
+}
+p{
+    background-color: antiquewhite;
+    padding: 10px;
+    margin:10px;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+/* selects only tags that have city and usa classes */
+/* .city.usa{
+    border: 3px solid red;
+} */
+
+/* selects only tags that have both city and usa classes
+that are present inside largecities div tag */
+.largecities .city.usa
+{
+border: 3px ridge green;
+}
+.smallcities
+{
+    clear: left;
+}
+.largecities{
+    height: 300px;
+}
+.smallcities{
+    height: 300px;
+}
+/* selects the single element where id="boston" */
+#boston{
+    border: 3px solid red;
+}
+#smaller .city.india {
+    border: 3px solid rebeccapurple;
+}
+p.city{
+    border:3px solid black;
+}
+p#boston{
+    border: 3px solid hotpink;
+}
+/* div .city.india{
+background-color: aquamarine;
+} */
+/* or div p */
+/* tag-tag child selector:selects all instances of <p>  that
+    are children(grandchildren too)of<div> tag(but not grand children) */
+/* div .city.india{
+ background-color: rgb(172, 140, 240);
+} */
+
+/*tag-tag  direct child selector:selects all instances of <p>  that
+    are  direct children(not grandchildren too)of<div> tag(but not grand children) */
+/* div>p{
+    background-color: hotpink;
+} */
+
+/* grouping selector */
+/* .city.usa,.city.uk{
+    background-color: salmon;
+} */
+
+/* next sibling selector */
+/* .city.usa+.city.india{
+    background-color: greenyellow;
+} */
+/* sibling selector */
+.city.usa~.city.india{
+    background-color: greenyellow;
+}
+/* attribute value selector */
+/* img[src="rose1.jpeg"]{
+  border:2px solid red;
+} */
+
+/* attribute-startswith selector */
+/* img[src^="CSS/"]{
+    border:3px ridge rgb(236, 10, 115);
+} */
+
+/* attribute ends with selector */
+/* img[src$="jpeg"]{
+    border: 3px dotted dodgerblue;
+   outline: none;
+} */
+
+/* attribute-contains selector */
+img[src*="CSS"]{
+    border:3px solid red;
+}
+/* 
+we can do same in form 
+input[type="text"]{
+
+} */
+
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding: 0px;
+}
+
+
+
+    </style>
+</head>
+<body>
+   <img src="CSS/ok.jpeg"width="200px">
+   <img src="CSS/rose1.jpeg"width="200px">
+   <img src="CSS/rose2.jpeg"width="200px">
+   <img src="sunflower.jpeg"width="200px">
+   <img width="200px" alt="no src attribute">
+   <img width="200px" alt="no src attribute">
+        <!-- <p>para1</p>
+        <p  class="class1">para2</p>
+        <p>para3</p>
+        <p class="class1">para4</p>
+        <p class="class1">para5</p>
+        <p>para6</p>
+        <p>para7</p>
+        <span class="class1">span1</span>
+        <span class="class1">span2</span>
+        <span class="class1">span3</span>
+        <span class="class1">span4</span> -->
+        <div class="largecities">
+        <p class="city uk">london</p>
+        <p class="city uk">manchester</p>
+        <p class="city usa" id="boston">boston</p>
+        <p class="city usa">manipur</p>
+    </div>
+
+    <div class="smallcities">
+        <p class="city india">ranchi</p>
+        <p class="city usa">goa</p>
+        <p class="city india">delhi</p>
+        <p class="city usa">manipur</p>
+    </div>
+
+    <div class="smallcities" id="smaller">
+        <p class="city usa">manipur</p>
+        <p class="city india">delhi</p>
+        <p class="city usa">goa</p>
+        <p class="city india">ranchi</p>
+       
+        <b>
+            <p class="city india">chennai</p>
+            <p class="city india">Mumbai</p>
+        </b>
+    </div>
+<p>other para</p>
+<p class="city india">bangalore</p>
+    
+</body>
+</html>

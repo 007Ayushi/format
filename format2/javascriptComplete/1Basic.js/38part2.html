@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setInterval(function(){
+    //     console.log("ayushi",Date.now());    
+    // },1000)//this code is continuously executing
+
+    let intervalId;
+    const sayDate=(function(str){
+    console.log(str,Date.now());      
+    })
+   //const intervalId=setInterval(sayDate,1000,"hii")
+
+    //to start
+    document.querySelector('#start').
+    addEventListener('click',function(){
+        if(!intervalId){//only starts if no interval is running
+            intervalId=setInterval(sayDate,1000,"hiii");
+            console.log("started");
+        }else{
+            console.log("already running");   
+        }
+        
+    });
+
+    //to stop
+    document.querySelector('#stop').
+    addEventListener('click',function(){
+       if(intervalId){//only clear if an interval is running
+        clearInterval(intervalId)
+        intervalId=null;//reset the interval id
+        console.log("stopped");
+       }else{
+        console.log("no interval to stop"); 
+       }
+        
+    })
+</script>
+</html>

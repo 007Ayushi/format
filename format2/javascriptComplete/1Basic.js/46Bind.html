@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button clicked</button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library="React"
+            this.server="https://localhost:300"
+
+            //requirement:jaisi hi ye page load ho ek object create hoga react ka
+            document
+                .querySelector('button')
+                .addEventListener('click',this.handleClick.//this has called by button
+                 bind(this));
+        }
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);
+            console.log(this);//<button>button clicked</button>  
+        }
+    }
+    const app=new React()
+</script>
+</html>
+
+
+<!-- Let me explain step by step and in simpler terms.
+
+### What is Happening in Your Code?
+
+1. **The `React` Class:**
+   - You made a `React` class that has:
+     - `this.library`: Holds the text `"React"`.
+     - `this.server`: Holds the text `"https://localhost:300"`.
+
+2. **Adding a Button Click Listener:**
+   - When the page loads, the constructor runs and adds a click listener to the button.
+   - When the button is clicked, it calls the `handleClick` method.
+
+3. **The Problem With `this`:**
+   - Normally, when a function is called, **`this` depends on how the function is called.**
+   - If you use a function as an event listener (like for the button), **`this` refers to the button, not your class instance.**
+   - So, if you try to use `this.server`, it won’t work because the button doesn't have a `server` property.
+
+### Why Use `bind(this)`?
+
+- `bind(this)` fixes the **`this` problem**. It makes sure that when `handleClick` runs, **`this` always refers to your class instance (`React`)**, not the button.
+
+### Example to Show the Problem
+
+Without `bind(this)`:
+
+```javascript
+document
+    .querySelector('button')
+    .addEventListener('click', this.handleClick); // No bind(this)
+```
+
+If you click the button:
+- `this` will refer to the button (`<button>`), not your class instance.
+- `this.server` will be `undefined`.
+
+### How `bind(this)` Fixes It
+
+When you use `bind(this)`:
+```javascript
+document
+    .querySelector('button')
+    .addEventListener('click', this.handleClick.bind(this));
+```
+
+- `bind(this)` locks the `this` value to your class instance. 
+- Now, when `handleClick` runs, it knows that `this` is the `React` object, and you can access `this.server`.
+
+### A Real-Life Analogy
+
+Imagine:
+1. **You (React class) give a task to someone (button)** to say something when clicked.
+2. Without `bind(this)`, they think **they (button)** should talk about themselves.
+3. With `bind(this)`, you make it clear they should talk about **you (React class)** instead.
+
+### Code Behavior
+
+1. **Without `bind(this)`:**
+   - `this` refers to the button.
+   - `console.log(this.server)` → `undefined`.
+
+2. **With `bind(this)`:**
+   - `this` refers to your `React` object.
+   - `console.log(this.server)` → `"https://localhost:300"`.
+
+### Final Code Walkthrough
+```javascript
+class React {
+    constructor() {
+        this.library = "React";
+        this.server = "https://localhost:300";
+
+        // Add event listener to button
+        document
+            .querySelector('button')
+            .addEventListener('click', this.handleClick.bind(this)); // Fix 'this' with bind
+    }
+
+    handleClick() {
+        console.log("button clicked"); // Message when button is clicked
+        console.log(this.server); // Logs the server property from the React class
+        console.log(this); // Refers to the React object, not the button
+    }
+}
+
+// Create an instance of React
+const app = new React();
+```
+
+Output when you click the button:
+1. **"button clicked"** (message).
+2. **"https://localhost:300"** (server URL).
+3. The `React` object is logged, showing its properties. -->

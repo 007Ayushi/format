@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGES-86</title>
+    <style>
+body{
+    /* background-image: url("sunflower.jpeg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;  
+}
+.states{
+    float:left;
+    margin: 30px 55px;
+    border:3px dotted red; 
+    width:450px;
+    /* background-color: gold; */
+    padding: 20px;
+    height: 380px;
+    float: left;
+    background-clip:border-box;
+    border-radius:6px 15px 20px 0px ;
+    /* background-image: url("sunflower.jpeg");
+background-repeat: no-repeat;
+ background-size: cover;  */
+ background-clip:border-box;
+ /* background:url("sunflower.jpeg") left top no-repeat, 
+ url("rose2.jpeg")right bottom no-repeat;*/
+/* background-position:10px 10px ; */
+border-image:url("sunflower.jpeg") 30% stretch;
+}
+.center{
+
+}
+    </style>
+</head>
+<body>
+  <div class="states">
+  </div>
+  <figcaption>ayushi</figcaption>
+  <div class="states"></div>
+  <div class="states"></div>
+  <div class="states"></div>
+  <div class="states"></div>
+   
+
+  <div class="center">
+    <picture>
+        <source srcset="rose2.jpeg" media="(min-width:1000px)">
+        <source srcset="rose1.jpeg" media="(min-width:200px)">
+        <img src="" width="300px" height="300px"/>
+    </picture>
+</div>
+   <div>
+    <audio controls="controls" autoplay="autoplay">
+        <source src="">
+        <source src="" audio is not downloaded>
+    </audio>
+</div>
+
+    <div class="center">
+        <video controls="controls" width="700px">
+            <source src="images/trailer.mp4"type="video/mp4">
+        </video>
+    </div>
+
+    <div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vsBpWgNYjtQ?si=eo7zO6UcOkgJUGVa" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+     clipboard-write; encrypted-media; gyroscope;
+     picture-in-picture; 
+    web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  
+ <div class="center">
+    <img src="sunflower.jpeg" width="300px" >
+
+ </div>
+</body>
+</html>

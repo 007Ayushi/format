@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #A51C21;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header .logo {
+            height: 50px;
+            margin-right: 1rem;
+            vertical-align: middle;
+        }
+
+        header h1 {
+            display: inline-block;
+            font-size: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background-image: url('hospital-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+        }
+
+        .about-us,
+        .departments,
+        .appointments {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .about-us p,
+        .departments p,
+        .appointments form {
+            max-width: 600px;
+            margin: 1rem auto;
+        }
+
+        .department-list {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .department {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            width: 200px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <img src="hospital-logo.png" alt="Hospital Logo" class="logo">
+            <h1>Hospital Management System</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#departments">Departments</a></li>
+                    <li><a href="#appointments">Appointments</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to XYZ Hospital</h2>
+                <p>Providing quality healthcare services to the community.</p>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about-us">
+            <h2>About Us</h2>
+            <p>We are a state-of-the-art hospital offering a range of medical services...</p>
+        </section>
+
+        <!-- Departments Section -->
+        <section id="departments" class="departments">
+            <h2>Our Departments</h2>
+            <div class="department-list">
+                <div class="department">
+                    <h3>Cardiology</h3>
+                    <p>Heart-related treatments and surgeries.</p>
+                </div>
+                <div class="department">
+                    <h3>Neurology</h3>
+                    <p>Specialized in brain and nervous system disorders.</p>
+                </div>
+                <!-- More departments -->
+            </div>
+        </section>
+
+        <!-- Appointments Section -->
+        <section id="appointments" class="appointments">
+            <h2>Book an Appointment</h2>
+            <form action="#">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <input type="date" placeholder="Preferred Date">
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 XYZ Hospital. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple form validation
+        document.querySelector('form').addEventListener('submit', function(event) {
+            let name = document.querySelector('input[type="text"]').value;
+            let email = document.querySelector('input[type="email"]').value;
+
+            if (name === '' || email === '') {
+                alert('Please fill out all fields.');
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

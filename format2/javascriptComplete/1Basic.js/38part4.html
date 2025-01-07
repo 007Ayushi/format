@@ -1,0 +1,115 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>key pressing</title>
+    <style>
+    table {
+    border: 1px solid white;
+    border-collapse: collapse;
+    margin: 20px auto;
+    color: white;
+    width: 80%;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body style="background-color: #414141;color:white;">
+   <div class="project">
+    <div id="insert">
+        <div class="key">press the key and watch magic</div>
+    </div>
+   </div>
+   <script>
+     const insert=document.getElementById('insert')
+
+     window.addEventListener('keydown',(e)=>{
+        insert.innerHTML=`
+        <div class='color'>
+        <table>
+  <tr>
+    <th>key</th>
+    <th>keyCode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === '' ? 'Space':e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+</table>  
+        </div>
+        `;
+     });
+   </script>
+    
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Pressing</title>
+    <style>
+        body {
+            background-color: #414141;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            border: 1px solid white;
+            border-collapse: collapse;
+            margin: 20px auto;
+            color: white;
+            width: 80%;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .key {
+            text-align: center;
+            margin: 20px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="project">
+        <div class="key">Press the key and watch the magic!</div>
+        <div id="insert"></div>
+    </div>
+    <script>
+        const insert = document.getElementById('insert');
+
+        window.addEventListener('keydown', (e) => {
+            insert.innerHTML = `
+                <div class='color'>
+                    <table>
+                        <tr>
+                            <th>Key</th>
+                            <th>Code</th>
+                        </tr>
+                        <tr>
+                            <td>${e.key === " " ? "Space" : e.key}</td>
+                            <td>${e.code}</td>
+                        </tr>
+                    </table>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

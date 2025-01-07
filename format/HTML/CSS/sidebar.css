@@ -1,0 +1,75 @@
+body{
+    font-family: 'Segoe UI';
+    font-size:22px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    /* it will include padding and border */
+    box-sizing: border-box;
+}
+.sidebar{
+    background-color: black;
+    color:white;
+    height: 100vh;
+    width:300px;
+}
+.sidebar_menu{
+    list-style-type: none;
+    color: white;
+}
+.sidebar-menu>li>a:link,
+.sidebar-menu>li>a:visited{
+    color:#ffffff;
+    text-decoration: none;
+    display: inline-block;
+    width:100%;
+    padding:10px;
+    height:30px;
+    line-height:30px;
+    transition: all 0.3s;
+}
+.sidebar-menu>li>a>i{
+    margin-right: 20px;
+    margin-left: 15px;;
+}
+.sidebar-menu>li>a:hover{
+    color:white;
+    border-left:3px solid skyblue;
+    background-color: rgb(44, 221, 221);
+}
+.sidebar .sub-menus>ul>li>a:link,
+.sidebar .sub-menus>ul>li:visited
+{
+    background-color: grey;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color:#ffffff;
+    line-height:30px;
+    padding: 0px;
+    transition: all 0.3s;
+
+}
+.sidebar .sub-menus>ul>li>a>i{
+margin-right: 10px;
+margin-left:40px;
+}
+.sidebar .sub-menus>ul>li>a:hover{
+    color:black;
+    background-color: rgb(51, 167, 213);
+    border-left:3px solid white;
+}
+.sidebar .sub-menus>ul{
+    list-style-type: none;
+    display: none;
+}
+.indicator{
+    float:right;
+    font-size: 0.8em;
+    line-height: 30px;
+    transition:  all 0.3s;
+}
+.reverse{
+    transform: rotate(180deg);
+}

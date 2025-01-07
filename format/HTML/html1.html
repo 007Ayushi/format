@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>basic html</title>
+        <link href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="CSS/styles.css" rel="stylesheet">
+        <style>
+            /* body{
+
+                /*font-shorthand:font:font-style font-variant font-weight font-size font-family*/
+                /* font: italic small-caps bold 0.4cm arial; */
+                /* font: 0.9em italic arial lighter;
+                 font-family:italic;
+                font-size:1.2em;
+                font-weight: bolder;
+                font-style:italic;
+                font-variant:small-caps; 
+                color:rgb(245, 84, 110);
+         } */
+            
+             
+            div{ /*//tag selector:selects all the instances of the specific tags*/
+                border:4px solid red;
+                margin:10px;
+                font-size:100%;
+                color:rgb(246, 17, 189);
+                
+            }
+            #heading1{
+               
+                border: 2px inset rgb(112, 241, 37) ;
+                margin:5px;
+                color:blue;
+                text-decoration-line:overline;
+                text-decoration-color:rgb(24, 230, 223);
+                text-decoration-style:dotted;
+                text-shadow: 5px 3px 6px orchid;
+
+            }
+            .class1{
+                border: 3px ridge orange;
+                margin:5px;
+                color:green;
+                text-decoration-line:underline ;
+                text-decoration-color:red;
+                text-decoration-style:wavy;
+                text-align: left;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .goaclass{
+            text-decoration-line: underline;
+            text-decoration-color:red;
+            text-decoration-style:dotted;
+            text-transform:capitalize;
+            font-family:'Courier New', Courier, monospace;    
+        }
+        #para{
+            font-size: 0.5cm;
+            color:purple;
+            font-variant:small-caps;
+            font-weight:bold;
+            font-style:italic;
+            font-family: 'Courier New', Courier, monospace;
+            text-indent:50px;
+            letter-spacing: 1px;
+            line-height:200%;
+            word-spacing: 10px;   
+            white-space: normal;    
+            direction:ltr;
+            unicode-bidi: bidi-override;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+    }
+    .name{
+        color:red;
+    }
+    .season{
+        color: #b11731;
+    }
+    .para2{
+        overflow:auto;
+        height: 40px;
+        word-wrap: break-word;
+        writing-mode: vertical-lr;
+        min-width: 600px;
+        max-width: 900px;
+    }
+    a:active{
+        background-color:pink;
+    }
+    a:visited{
+        background-color: khaki;
+        text-decoration: none;
+    }
+    a:hover{
+        background-color:yellow;
+    }
+    a:link{
+        background-color: orangered;
+        color:rgb(14, 177, 222);
+        padding: 10px 10px;
+        transition:background-color 2s;
+        text-decoration: none;
+    }
+        </style>
+        <div>
+        <body>
+
+        <a href="#para">introduction</a>
+        <a href="pdffile.pdf"  target="myiframe" frameborder="0">click here to open the pdffile</a>
+         <!-- Navigation Starts here -->
+         <div id="navbar">
+            <div class="navbar-brand">India Tourism</div>
+            <div class="nav">
+               <ul>
+                <li><a href="html1.html">html1</a></li>
+                <li><a href="html2.html">html2</a></li>
+                <li><a href="html3.html">html3</a></li>
+                <li><a href="form.html">form</a></li>
+               </ul>     
+            </div>
+        </div>
+        <!-- Navigation Ends here -->
+          
+          <div class="copy-right">All &copy;rights reserved </div>
+            <!-- //id selector selects particular  or single instances of the tag -->
+            <div id="heading1">
+            <h1>welcome to india tourism`</h1>
+            <h2>popular destinations</h2>
+        </div>
+        </body>
+        <div id="nav">
+            <a href="html2.html">html2</a>
+            <a href="html1.html">html1</a>
+            <a href="html3.html">html3</a>
+
+        </div>
+        <div class="goaclass">
+            <h3 class="goaclass"><span class="materials-icons">location_city</span>goa</h3>
+            <h4>things to do</h4>
+            <h5>first one</h5>
+        </div>
+
+        <iframe src="html1.html" width="600px"height="350px" name="myiframe"></iframe>
+            <h6>about first one</h6>
+            <hr>//it creates horizontal ruler in the website                                                       
+            <h5>second one</h5>
+            <h6>about second one</h6>
+        
+            <hr>
+             //selects all the instances of a tag based on the classname -->
+            <div class="class1">
+            <h4>day plans</h4>
+            <h5>first one</h5>
+            <h6>about first one</h6>
+            <h5>second one</h5>
+            <h6>about second one</h6>
+        </div>
+        <div id="para">
+        <p>HI,My Name is <span class="name">Ayushi</span> and its my aim is to complete full stack web development.<br>and also studying dsa along with.</p>
+        <h3 class="season"><span class="fa fa-cloud-rain">rainy</span></h3>
+        <h3 class="season"><span class="fa fa-sun">summer</h3>  
+    </div>
+   <div class="para2">
+    <p>i am currentlyyruheybxgejghdghdywbjnievxugdjdsgwuhduwibhdbduebyed sudying web development and it is basically necessary tagthat everyone needs to know;HI,My Name is ayushi and its my aim is to complete full stack web development and also studying dsa along with</p>
+   </div>
+    </div>
+        
+        </body>
+    </head>
+</html>  
+

@@ -1,0 +1,55 @@
+html{
+    box-sizing: border-box;
+}
+*{/*Universal selector*/
+    box-sizing: inherit;
+}
+.section-light{
+    background-color: #f4f4f4;
+    color: #161414;
+    
+}
+.section-dark{
+    background-color:#282e34 ;
+    color: white;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.image{
+    background-attachment: fixed;/*This property is adding the parallelax effect*/
+    background-size: cover;
+}
+.first-image{
+    background-image:url(https://tse1.mm.bing.net/th?id=OIP.59vGWUUShJvh6hhXcVh4CAHaF-&pid=Api&P=0&h=220);
+    min-height: 500px;
+    opacity: 0.8;
+
+}
+.second-image{
+   background-image: url(https://tse4.mm.bing.net/th?id=OIP.iISweu7GaH-drb29sIPyQwHaE9&pid=Api&P=0&h=220);
+    min-height: 500px;
+    opacity: 0.8;
+
+}
+.third-image{
+    background-image: url(https://tse3.mm.bing.net/th?id=OIP.FNDJs1Ym_xobOW3jo5SgwwHaE7&pid=Api&P=0&h=220);
+    min-height: 500px;
+    opacity: 0.8;
+    background-image: url(https://tse1.mm.bing.net/th?id=OIP.Vj8KBN-Qg9VHvYdvcpiimwHaFj&pid=Api&P=0&h=220);
+}
+.text-section{
+    position:relative ;
+    top:200px;
+    left:500px;
+    background-color: black;
+    color:white;
+    opacity:0.8s;
+    width:15%;
+    height: 35px;
+    text-transform: uppercase;
+    padding:10px;
+    text-align: center;
+   
+}

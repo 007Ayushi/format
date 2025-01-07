@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        #opd-list, #bed-list {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select, button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hospital Management System</h1>
+        <nav>
+            <a href="#opd-queue">OPD Queue</a>
+            <a href="#bed-availability">Bed Availability</a>
+            <a href="#patient-admission">Patient Admission</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="opd-queue">
+            <h2>OPD Queue Management</h2>
+            <div id="opd-list">
+                <!-- Queue data will be populated here -->
+            </div>
+        </section>
+
+        <section id="bed-availability">
+            <h2>Bed Availability</h2>
+            <div id="bed-list">
+                <!-- Bed availability data will be populated here -->
+            </div>
+        </section>
+
+        <section id="patient-admission">
+            <h2>Patient Admission</h2>
+            <form id="admission-form">
+                <label for="patient-name">Patient Name:</label>
+                <input type="text" id="patient-name" name="patient-name" required>
+                
+                <label for="patient-age">Age:</label>
+                <input type="number" id="patient-age" name="patient-age" required>
+                
+                <label for="ward">Ward:</label>
+                <select id="ward" name="ward">
+                    <option value="general">General</option>
+                    <option value="icu">ICU</option>
+                    <option value="maternity">Maternity</option>
+                </select>
+                
+                <button type="submit">Admit Patient</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hospital Management System</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sample data for OPD queue and bed availability
+            const opdQueue = [
+                { name: 'John Doe', status: 'Waiting' },
+                { name: 'Jane Smith', status: 'Consulting' },
+                { name: 'Michael Brown', status: 'Waiting' }
+            ];
+
+            const bedAvailability = [
+                { ward: 'General', beds: 5 },
+                { ward: 'ICU', beds: 2 },
+                { ward: 'Maternity', beds: 3 }
+            ];
+
+            // Function to render OPD queue
+            function renderOPDQueue() {
+                const opdList = document.getElementById('opd-list');
+                opdList.innerHTML = opdQueue.map(patient => `
+                    <div class="patient">
+                        <strong>${patient.name}</strong> - ${patient.status}
+                    </div>
+                `).join('');
+            }
+
+            // Function to render bed availability
+            function renderBedAvailability() {
+                const bedList = document.getElementById('bed-list');
+                bedList.innerHTML = bedAvailability.map(bed => `
+                    <div class="bed">
+                        <strong>${bed.ward}</strong> - ${bed.beds} beds available
+                    </div>
+                `).join('');
+            }
+
+            // Event listener for patient admission form
+            const admissionForm = document.getElementById('admission-form');
+            admissionForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const patientName = document.getElementById('patient-name').value;
+                const patientAge = document.getElementById('patient-age').value;
+                const ward = document.getElementById('ward').value;
+
+                alert(`Admitting patient: ${patientName}, Age: ${patientAge}, Ward: ${ward}`);
+                // Add the logic to handle patient admission
+            });
+
+            // Initial render
+            renderOPDQueue();
+            renderBedAvailability();
+        });
+    </script>
+</body>
+</html>
